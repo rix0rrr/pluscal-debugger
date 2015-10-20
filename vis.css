@@ -1,0 +1,43 @@
+.code {
+    font-family: monospace;
+    white-space: pre;
+    padding: 0.1em;
+    margin: 0px;
+}
+
+#buttons {
+    float: right;
+    width: 300px;
+    padding: 0 1em;
+}
+
+.page2 {
+    display: none;
+}
+
+#script-container {
+    height: 600px;
+    border: solid 1px grey;
+    overflow: auto;
+}
+
+#state {
+    border-collapse: collapse;
+}
+
+#state th, #state td { padding: 0.2em; }
+
+#state td {
+    margin: 0;
+    border: solid 1px lightgrey;
+}
+
+.pane {
+    width: 400px;
+    float: left;
+    padding: 1em;
+}
+
+textarea {
+    font-family: monospace;
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <title>PlusCal Debugger</title>
+        <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="vis.css">
+    </head>
+    <body style="padding-top: 70px;">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="navbar-brand" href="#">PlusCal Debugger</div>
+                    </div>
+                    <div class="col-md-4">
+                        <button id="prev-btn" class="page2 btn btn-default navbar-btn"><span class="glyphicon glyphicon-backward"></span></button>
+                        <button id="next-btn" class="page2 btn btn-default navbar-btn"><span class="glyphicon glyphicon-forward"></span></button>
+                        <button id="reset-btn" class="page2 btn btn-default navbar-btn navbar-right" class="page2">Reset</button>
+                        <p class="page2 navbar-text navbar-right" style="margin-right: 1em;">(or left &amp; right arrow)</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="page1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="lead">Welcome to the PlusCal debugger</p>
+                        <p>Paste in your specification and your trace (get the
+                        trace from the TLC console and clear it before running
+                        TLC) below, then click <em>Visualize</em> to step
+                        through your spec.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>PlusCal program</h3>
+                        <div class="form-group">
+                            <textarea id="program" class="form-control" style="height: 400px;"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>TLC Trace</h3>
+                        <div class="form-group">
+                            <textarea id="trace" class="form-control" style="height: 400px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="visualize" class="btn btn-primary btn-lg">Visualize</button>
+                    </div>
+                </div>
+            </div>
+            <div class="page2">
+                <div class="row">
+                    <div class="col-md-8" id="script-container">
+                    </div>
+                    <div class="col-md-4">
+                        <h3 id="stepnr"></h3>
+                        <table id="state"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Libs -->
+        <script src="jquery-1.10.2.min.js"></script>
+        <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <script src="lodash.min.js"></script>
+        <script src="rsvp.js"></script>
+
+        <!-- App -->
+        <script src="vis.js"></script>
+    </body>
+</html>
